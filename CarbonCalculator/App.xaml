@@ -6,6 +6,24 @@
              x:Class="CarbonCalculator.App">
     <Application.Resources>
         <ResourceDictionary>
+
+            <Color x:Key="PrimaryColor">#78CA63</Color>
+            <Color x:Key="SecondaryColor">#B7B2B2</Color>
+            <Color x:Key="ThirdColor">#000000</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}"/>
+                <Setter Property="FontFamily" Value="Montserrat"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}"/>
+                <Setter Property="FontFamily" Value="Montserrat"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+                <Setter Property="Padding" Value="14,10"/>
+                
+            </Style>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

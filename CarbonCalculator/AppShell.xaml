@@ -6,9 +6,9 @@
     xmlns:local="clr-namespace:CarbonCalculator"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:Pages.HomePage}"
-        Route="HomePage" />
+        Route="HomePage" />-->
 
 </Shell>

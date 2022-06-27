@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarbonCalculator.Pages.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Title="LoginPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.20*"/>
+            <RowDefinition Height="0.20*"/>
+            <RowDefinition Height="0.20*"/>
+            <RowDefinition Height="0.20*"/>
+            <RowDefinition Height="0.20*"/>
+        </Grid.RowDefinitions>
+        <Image Source="home.png" Grid.Row="0" HorizontalOptions="Center"/>
+        
+        <Label Text="Log In To &#x0a; Sustainability Cockpit" 
+               Grid.Row="1"
+               TextColor="{DynamicResource ThirdColor}"
+               FontSize="32" 
+               HorizontalTextAlignment="Center" 
+               FontAttributes="Bold"/>
+
+        <VerticalStackLayout Margin="20" Grid.Row="2">
+            <Label Text="Email" TextColor="{DynamicResource SecondaryColor}" FontSize="20"/>
+            <Frame BorderColor="White">
+                <VerticalStackLayout>
+                    <Entry Placeholder="youremial@email.com" Keyboard="Email" PlaceholderColor="{DynamicResource ThirdColor}"/>
+                    <BoxView Color="{DynamicResource SecondaryColor}" HeightRequest="1" HorizontalOptions="Fill"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Margin="20" Grid.Row="3">
+            <Label Text="Password" TextColor="{DynamicResource SecondaryColor}" FontSize="20"/>
+            <Frame BorderColor="White">
+                <VerticalStackLayout>
+                    <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="{DynamicResource ThirdColor}"/>
+                    <BoxView Color="{DynamicResource SecondaryColor}" HeightRequest="1" HorizontalOptions="Fill"/>
+                </VerticalStackLayout>
+            </Frame>
+            <Label Text="Forgotten password?" 
+                   HorizontalOptions="End"
+                   FontAttributes="Bold"/>
+        </VerticalStackLayout>
+
+
+        <Button Text="Login" 
+                Grid.Row="4" 
+                Margin="20"
+                BackgroundColor="{DynamicResource PrimaryColor}" 
+                TextColor="White"/>
+
+        <HorizontalStackLayout Grid.Row="5" Margin="20">
+            <Label Text="New user?" 
+                   TextColor="{DynamicResource SecondaryColor}"/>
+            <Label Text="Create account" 
+                   TextColor="{DynamicResource PrimaryColor}" 
+                   HorizontalTextAlignment="End"/>
+        </HorizontalStackLayout>
+    </Grid>
+</ContentPage>

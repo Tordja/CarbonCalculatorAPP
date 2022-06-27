@@ -18,7 +18,8 @@ public static class MauiProgram
 			});
 
 		var services = builder.Services;
-		services.AddTransient<HomePage>();
+        services.AddTransient<LoginPage>();
+        services.AddTransient<HomePage>();
         services.AddTransient<HomeViewModel>();
 
 

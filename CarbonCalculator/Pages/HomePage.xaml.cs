@@ -5,7 +5,7 @@ namespace CarbonCalculator.Pages;
 
 public partial class HomePage : ContentPage
 {
-	int count = 0;
+	//int count = 0;
 
 	public Command HomeCommand { get; set; } = new Command(() =>
     {
@@ -17,6 +17,5 @@ public partial class HomePage : ContentPage
         BindingContext = vm;
         InitializeComponent();
 	}
-
 }
 
