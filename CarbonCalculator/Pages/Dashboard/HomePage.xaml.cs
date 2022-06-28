@@ -1,7 +1,7 @@
 ﻿using CarbonCalculator.ViewModels;
 using System.Diagnostics;
 
-namespace CarbonCalculator.Pages;
+namespace CarbonCalculator.Pages.Dashboard;
 
 public partial class HomePage : ContentPage
 {

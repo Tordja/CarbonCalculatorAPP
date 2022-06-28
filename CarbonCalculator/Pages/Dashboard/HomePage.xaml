@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:m="clr-namespace:CarbonCalculator.Models"
+             xmlns:local="clr-namespace:CarbonCalculator.ViewModels"
+             x:Class="CarbonCalculator.Pages.Dashboard.HomePage">
+
+
+    <ContentPage.BindingContext>
+        <local:HomeViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <HorizontalStackLayout HorizontalOptions="StartAndExpand" Grid.Row="0">
+            <Button Text="Overview" BorderColor="{DynamicResource ThirdColor}" BackgroundColor="White"/>
+            <Button Text="Something" BorderColor="{DynamicResource ThirdColor}" BackgroundColor="White"/>
+            <Button Text="Else" BorderColor="{DynamicResource ThirdColor}" BackgroundColor="White"/>
+        </HorizontalStackLayout>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <VerticalStackLayout Grid.Column="0">
+                <Label Text="Travel" FontSize="25"/>
+                <Label Text="Material" FontSize="25"/>
+                <Label Text="Exhibiton" FontSize="25"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1">
+                <HorizontalStackLayout>
+                    <Label Text="{Binding TotalArtCO2Emission}" FontSize="25"/>
+                    <Label Text="kg CO²" FontSize="25"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="{Binding TotalTravelCO2Emission}" FontSize="25"/>
+                    <Label Text="kg CO²" FontSize="25"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="{Binding TotalExhibitionCO2Emission}" FontSize="25"/>
+                    <Label Text="kg CO²" FontSize="25"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

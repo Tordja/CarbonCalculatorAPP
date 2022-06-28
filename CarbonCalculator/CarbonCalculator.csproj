@@ -38,8 +38,9 @@
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
-		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+		<MauiImage Include="Resources\Image\*" />
+		<MauiImage Include="Resources\Logos\*" />
+		<MauiImage Update="Resources\Image\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -49,22 +50,38 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\HomePage.xaml.cs">
+	  <None Remove="Resources\Image\dotnet_bot.svg" />
+	  <None Remove="Resources\Image\edit.png" />
+	  <None Remove="Resources\Image\home.png" />
+	  <None Remove="Resources\Image\plus.png" />
+	  <None Remove="Resources\Logos\sustevo.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Image\dotnet_bot.svg" />
+	  <MauiImage Include="Resources\Image\edit.png" />
+	  <MauiImage Include="Resources\Image\home.png" />
+	  <MauiImage Include="Resources\Image\plus.png" />
+	  <MauiImage Include="Resources\Logos\sustevo.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.1.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\Dashboard\HomePage.xaml.cs">
 	    <DependentUpon>HomePage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\LoginPage.xaml.cs">
+	  <Compile Update="Pages\Startup\LoginPage.xaml.cs">
 	    <DependentUpon>LoginPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\LoginPage.xaml">
+	  <MauiXaml Update="Pages\Startup\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Resources\Image\" />
 	</ItemGroup>
 
 </Project>

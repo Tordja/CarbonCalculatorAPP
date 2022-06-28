@@ -1,5 +1,6 @@
 ﻿using Microsoft.Maui.LifecycleEvents;
-using CarbonCalculator.Pages;
+using CarbonCalculator.Pages.Startup;
+using CarbonCalculator.Pages.Dashboard;
 using CarbonCalculator.ViewModels;
 
 namespace CarbonCalculator;
@@ -20,7 +21,9 @@ public static class MauiProgram
 		var services = builder.Services;
         services.AddTransient<LoginPage>();
         services.AddTransient<HomePage>();
+
         services.AddTransient<HomeViewModel>();
+        services.AddTransient<LoginViewModel>();
 
 
         return builder.Build();
